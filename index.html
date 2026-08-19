@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Convite de Formatura</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <audio id="musicaConvite" loop>
+    <source src="./Coldplay.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- =========================================
+         PRIMEIRA TELA
+    ========================================== -->
+
+    <section class="abertura" id="abertura">
+
+        <!-- Faixas do papel -->
+        <div class="faixa faixa-1"></div>
+        <div class="faixa faixa-2"></div>
+        <div class="faixa faixa-3"></div>
+
+
+        <!-- MONOGRAMA -->
+
+        <div class="monograma">
+
+            <div class="oval"></div>
+
+            <div class="letras">
+
+                <span class="letra-c">C</span>
+
+                <span class="letra-r">R</span>
+
+            </div>
+
+        </div>
+
+      
+
+        <!-- BOTÃO -->
+
+        <button
+            class="pular"
+            id="botaoPular"
+            onclick="pularAbertura()"
+        >
+            PULAR ABERTURA
+        </button>
+
+    </section>
+
+
+
+<!-- =========================================
+     SEGUNDA TELA
+========================================= -->
+
+<section class="segunda-tela" id="segundaTela">
+
+    <!-- FOTO -->
+
+    <div class="foto-convite">
+
+        <img
+            src="./chaiane1.png"
+            alt="Chaiane Rott"
+        >
+
+    </div>
+
+
+    <!-- TÍTULO -->
+
+    <div class="titulo-convite">
+
+        <p class="tipo-convite">
+            CONVITE DE FORMATURA
+        </p>
+
+        <h1>
+            Chaiane Rott
+        </h1>
+
+    </div>
+
+
+       <!-- INDICADOR -->
+
+    <div class="indicador-rolagem">
+
+        <span>⌄</span>
+        <span>⌄</span>
+        <span>⌄</span>
+        <span>⌄</span>
+        <span>⌄</span>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     INFORMAÇÃO DA FORMATURA
+========================================= -->
+
+<section class="informacao-formatura">
+
+    <p class="curso">
+        Licenciatura em Pedagogia
+    </p>
+
+    <p class="instituicao">
+        UNIAVAN · 2026/2
+    </p>
+
+    <p class="frase">
+        “A educação é um ato de amor, por isso, um ato de coragem.”
+    </p>
+
+    <p class="autor">
+        — Paulo Freire
+    </p>
+
+<div class="galeria-formatura">
+
+    <div class="galeria-track">
+
+    <!-- PRIMEIRA SEQUÊNCIA -->
+
+    <div class="foto-galeria">
+        <img src="./chaiane9.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane7.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane10.png" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane8.jpeg" alt="">
+    </div>
+
+
+    <!-- SEGUNDA SEQUÊNCIA -->
+
+    <div class="foto-galeria">
+        <img src="./chaiane9.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane7.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane10.png" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane8.jpeg" alt="">
+    </div>
+
+ <!-- TERCEIRA SEQUÊNCIA -->
+
+    <div class="foto-galeria">
+        <img src="./chaiane9.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane7.jpeg" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane10.png" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane8.jpeg" alt="">
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- =========================================
+     CONVITE PARA A SOLENIDADE
+========================================= -->
+
+<section class="convite-solenidade">
+
+    <p>
+        Sinto-me honrada em convidá-los para a solenidade da minha formatura.
+    </p>
+
+</section>
+
+<section class="detalhes-celebracao">
+
+    <p class="titulo-celebracao">
+        A celebração:
+    </p>
+
+    <p class="nome-evento">
+        Culto Ecumênico
+    </p>
+
+    <p class="descricao-evento">
+        O Culto Ecumênico será celebrado na Igreja Matriz
+        Paróquia Santíssimo Sacramento, no Centro de Itajaí/SC,
+        no dia 29 de janeiro de 2027, às 21h.
+    </p>
+
+    <img
+        src="./igreja_matriz_aquarela_sem_fundo_2.png"
+        alt="Igreja Matriz Paróquia Santíssimo Sacramento"
+        class="imagem-igreja"
+    >
+
+    <p class="nome-local">
+        Igreja Matriz Paróquia Santíssimo Sacramento
+    </p>
+
+    <p class="endereco">
+        Av. Cel. Marcos Konder, Centro<br>
+        Itajaí — SC
+    </p>
+
+    <div class="botoes-local">
+
+    <a
+        href="https://www.google.com/maps/search/?api=1&query=Igreja+Matriz+Par%C3%B3quia+Sant%C3%ADssimo+Sacramento+Itaja%C3%AD+SC"
+        target="_blank"
+        class="botao-local"
+    >
+        VER NO MAPA
+    </a>
+
+    <a 
+    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Culto+Ecum%C3%AAnico+-+Formatura&dates=20270129T210000/20270129T220000&details=Culto+Ecum%C3%AAnico+da+formatura%2C+celebrado+na+Igreja+Matriz+Par%C3%B3quia+Sant%C3%ADssimo+Sacramento.&location=Igreja+Matriz+Par%C3%B3quia+Sant%C3%ADssimo+Sacramento%2C+Av.+Cel.+Marcos+Konder%2C+Centro%2C+Itaja%C3%AD+-+SC"
+    target="_blank"
+    class="botao-local"
+>
+    ADICIONAR À AGENDA
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     COLAÇÃO DE GRAU E BAILE DE FORMATURA
+========================================= -->
+
+<section class="detalhes-celebracao">
+
+
+    <p class="nome-evento">
+        Colação de Grau e Baile de Formatura
+    </p>
+
+    <p class="descricao-evento">
+        A Colação de Grau acontecerá às 18h e o Baile de Formatura
+        às 23h, no Espaço de Eventos Maria's, em Camboriú/SC,
+        no dia 30 de janeiro de 2027.
+    </p>
+
+    <img
+        src="./marias-sem-fundo.png"
+        alt="Espaço de Eventos Maria's"
+        class="imagem-igreja"
+    >
+
+    <p class="nome-local">
+        Espaço de Eventos Maria's
+    </p>
+
+    <p class="endereco">
+        Rua Antônio Lopes Gonçalves Bastos, 1083 — Rio Pequeno<br>
+        Camboriú — SC
+    </p>
+
+    <div class="botoes-local">
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+de+Eventos+Maria%27s%2C+Rua+Ant%C3%B4nio+Lopes+Gon%C3%A7alves+Bastos%2C+1083%2C+Rio+Pequeno%2C+Cambori%C3%BA+-+SC"
+            target="_blank"
+            class="botao-local"
+        >
+            VER NO MAPA
+        </a>
+
+        <a
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cola%C3%A7%C3%A3o+de+Grau+e+Baile+de+Formatura&dates=20270130T180000/20270130T230000&details=Cola%C3%A7%C3%A3o+de+Grau+%C3%A0s+18h+e+Baile+de+Formatura+%C3%A0s+23h.&location=Espa%C3%A7o+de+Eventos+Maria%27s%2C+Rua+Ant%C3%B4nio+Lopes+Gon%C3%A7alves+Bastos%2C+1083%2C+Rio+Pequeno%2C+Cambori%C3%BA+-+SC"
+            target="_blank"
+            class="botao-local"
+        >
+            ADICIONAR À AGENDA
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROGRAMAÇÃO
+========================================= -->
+
+<section class="programacao">
+
+    <p class="titulo-programacao">
+        PROGRAMAÇÃO
+    </p>
+
+    <div class="programacao-wrapper">
+
+        <button class="seta-programacao seta-esquerda" aria-label="Programação anterior">
+            ‹
+        </button>
+
+        <div class="programacao-container">
+
+            <!-- CULTO ECUMÊNICO -->
+
+            <div class="card-programacao">
+
+                <img
+                    src="./igreja_matriz_aquarela_sem_fundo_2.png"
+                    alt="Igreja Matriz Paróquia Santíssimo Sacramento"
+                >
+
+                <p class="nome-programacao">
+                    Culto Ecumênico
+                </p>
+
+                <p class="data-programacao">
+                    <strong>29 de janeiro de 2027 · 21h</strong>
+                </p>
+
+                <p class="local-programacao">
+                    Igreja Matriz Paróquia Santíssimo Sacramento — Itajaí/SC
+                </p>
+
+            </div>
+
+
+            <!-- COLAÇÃO DE GRAU -->
+
+            <div class="card-programacao">
+
+                <img
+                    src="./marias_interno.png"
+                    alt="Espaço de Eventos Maria's"
+                >
+
+                <p class="nome-programacao">
+                    Colação de Grau
+                </p>
+
+                <p class="data-programacao">
+                    <strong>30 de janeiro de 2027 · 18h</strong>
+                </p>
+
+                <p class="local-programacao">
+                    Maria’s — Camboriú/SC
+                </p>
+
+            </div>
+
+
+            <!-- BAILE DE FORMATURA -->
+
+            <div class="card-programacao">
+
+                <img
+                    src="./marias-sem-fundo.png"
+                    alt="Espaço de Eventos Maria's"
+                >
+
+                <p class="nome-programacao">
+                    Baile de Formatura
+                </p>
+
+                <p class="data-programacao">
+                    <strong>30 de janeiro de 2027 · 23h</strong>
+                </p>
+
+                <p class="local-programacao">
+                    Maria’s — Camboriú/SC
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="seta-programacao seta-direita" aria-label="Próxima programação">
+            ›
+        </button>
+
+    </div>
+
+    <div class="indicadores-programacao">
+
+        <span class="indicador ativo"></span>
+        <span class="indicador"></span>
+        <span class="indicador"></span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONFIRMAÇÃO DE PRESENÇA
+========================================= -->
+
+<section class="confirmacao-presenca">
+
+    <p class="titulo-confirmacao">
+        CONFIRME SUA PRESENÇA
+    </p>
+
+    <p class="texto-confirmacao">
+        Será uma alegria celebrar este momento tão especial
+        ao lado de pessoas queridas.
+    </p>
+
+    <form id="formConfirmacao" class="form-confirmacao">
+
+        <div class="campo-confirmacao">
+
+            <label for="nome">
+                Nome
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo-confirmacao">
+
+            <label for="whatsapp">
+                WhatsApp
+            </label>
+
+            <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="(47) 99999-9999"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo-confirmacao">
+
+            <label for="email">
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo-confirmacao">
+
+            <label>
+                Você estará presente?
+            </label>
+
+            <div class="opcoes-presenca">
+
+                <label class="opcao-presenca">
+
+                    <input
+                        type="radio"
+                        name="presenca"
+                        value="Sim, estarei presente"
+                        required
+                    >
+
+                    <span>
+                        Sim, estarei presente
+                    </span>
+
+                </label>
+
+
+                <label class="opcao-presenca">
+
+                    <input
+                        type="radio"
+                        name="presenca"
+                        value="Não irei comparecer"
+                    >
+
+                    <span>
+                        Não irei comparecer
+                    </span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="campo-confirmacao">
+
+            <label for="acompanhantes">
+                Quantidade de acompanhantes
+            </label>
+
+            <select
+                id="acompanhantes"
+                name="acompanhantes"
+            >
+
+                <option value="0">
+                    Nenhum
+                </option>
+
+                <option value="1">
+                    1 acompanhante
+                </option>
+
+                <option value="2">
+                    2 acompanhantes
+                </option>
+
+                <option value="3">
+                    3 acompanhantes
+                </option>
+
+                <option value="4">
+                    4 acompanhantes
+                </option>
+
+                <option value="5">
+                    5 acompanhantes
+                </option>
+
+            </select>
+
+        </div>
+
+
+       <p class="prazo-confirmacao">
+    Confirme sua presença até <strong>15 de dezembro de 2026.</strong>
+</p>
+
+<p class="aviso-acompanhantes">
+    A participação depende da aprovação da formanda, que será
+    repassada em breve pelo WhatsApp após análise.
+</p>
+
+
+        <button
+            type="submit"
+            class="botao-confirmacao"
+        >
+            ENVIAR CONFIRMAÇÃO
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =========================================
+     DÚVIDAS FREQUENTES
+========================================= -->
+
+<section class="duvidas-frequentes">
+
+    <p class="titulo-duvidas">
+        DÚVIDAS FREQUENTES
+    </p>
+
+    <p class="subtitulo-duvidas">
+        Algumas informações importantes para aproveitar
+        cada momento da celebração.
+    </p>
+
+
+    <div class="faq-container">
+
+
+        <!-- PERGUNTA 1 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Posso levar acompanhantes?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    No Culto Ecumênico e na Colação de Grau,
+                    não há limite de acompanhantes. Para o Baile
+                    de Formatura, a quantidade de acompanhantes
+                    deverá ser confirmada diretamente com a formanda.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 2 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Crianças podem participar dos eventos?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    Sim. Crianças podem participar do Culto Ecumênico
+                    e da Colação de Grau. Para o Baile de Formatura,
+                    menores de 18 anos precisam apresentar autorização
+                    dos responsáveis, com firma reconhecida em cartório
+                    ou assinatura realizada pelo Gov.br.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 3 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Qual é o traje para os eventos?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    O traje para todos os eventos é social.
+                    Para o Culto Ecumênico, recomenda-se a preferência
+                    por tons claros.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 4 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Até quando devo confirmar minha presença?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    A confirmação deverá ser realizada até
+                    <strong>15 de dezembro de 2026.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 5 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Posso tirar fotos durante os eventos?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    Sim! Fique à vontade para registrar e compartilhar
+                    os momentos especiais da celebração.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 6 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Que horas devo chegar?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    Recomenda-se chegar com, no mínimo,
+                    <strong>15 minutos de antecedência.</strong>
+                </p>
+
+                <p>
+                    Culto Ecumênico: <strong>21h</strong><br>
+                    Colação de Grau: <strong>18h</strong><br>
+                    Baile de Formatura: <strong>23h</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 7 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    O convite é individual?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    Sim. O convite é <strong>individual e intransferível.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERGUNTA 8 -->
+
+        <div class="faq-item">
+
+            <button class="faq-pergunta">
+
+                <span>
+                    Posso alterar minha resposta depois de confirmar?
+                </span>
+
+                <span class="faq-simbolo">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+                <p>
+                    Sim. Caso precise alterar sua confirmação,
+                    entre em contato com a formanda pelo WhatsApp
+                    com, pelo menos, <strong>15 dias de antecedência.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     UM GESTO DE CARINHO
+========================================= -->
+
+<section class="gesto-carinho">
+
+    <div class="card-carinho">
+
+        <div class="foto-carinho">
+
+            <img
+                src="./chaiane3.jpeg"
+                alt="Chaiane Rott"
+            >
+
+        </div>
+
+
+        <div class="texto-carinho">
+
+            <p class="titulo-carinho">
+                Um gesto de carinho
+            </p>
+
+            <p class="mensagem-carinho">
+                Se quiser me presentear ou deixar uma mensagem especial,
+                ficarei muito feliz em receber seu carinho neste momento
+                tão importante.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CONTAGEM REGRESSIVA
+========================================= -->
+
+<section class="contagem-regressiva">
+
+    <p class="titulo-contagem">
+        CONTAGEM REGRESSIVA
+    </p>
+
+    <p class="texto-contagem">
+    Até o nosso primeiro grande momento
+</p>
+
+    <div class="contador">
+
+        <div class="tempo">
+            <span id="dias">00</span>
+            <small>DIAS</small>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="tempo">
+            <span id="horas">00</span>
+            <small>HORAS</small>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="tempo">
+            <span id="minutos">00</span>
+            <small>MINUTOS</small>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="tempo">
+            <span id="segundos">00</span>
+            <small>SEGUNDOS</small>
+        </div>
+
+    </div>
+
+    <p class="nome-contagem">
+    Culto Ecumênico
+</p>
+
+<p class="data-contagem">
+    29 de janeiro de 2027 · 21h
+</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html> 

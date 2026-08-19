@@ -1,0 +1,2487 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #eeebe3;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =========================================
+   PRIMEIRA TELA
+========================================= */
+
+.abertura {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* =========================================
+   BLOQUEAR ROLAGEM NA ABERTURA
+========================================= */
+
+body.abertura-ativa {
+    overflow: hidden;
+}
+
+body.abertura-ativa .abertura {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   FAIXAS VERTICAIS
+========================================= */
+
+.faixa {
+    display: none;
+}
+
+
+/* =========================================
+   MONOGRAMA
+========================================= */
+
+.monograma {
+    position: absolute;
+
+    top: 47%;
+    left: 50%;
+
+    width: 290px;
+    height: 410px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   OVAL
+========================================= */
+
+.oval {
+    position: absolute;
+
+    width: 270px;
+    height: 400px;
+
+    border: 1px solid rgba(120, 105, 80, 0.35);
+
+    border-radius: 50%;
+
+    box-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.85),
+         1px  1px 0 rgba(120, 105, 80, 0.22);
+}
+
+.oval::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(120, 105, 80, 0.20);
+
+    border-radius: 50%;
+
+    box-shadow:
+        -0.5px -0.5px 0 rgba(255, 255, 255, 0.65),
+         0.5px  0.5px 0 rgba(120, 105, 80, 0.12);
+}
+
+
+/* =========================================
+   LETRAS
+========================================= */
+
+.letras {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    font-family: 'Allura', cursive;
+
+    color: #faf8f2;
+
+    font-weight: 400;
+
+    text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.9),
+         1px  1px 0 rgba(120, 105, 80, 0.35),
+         0    0 0.6px rgba(120, 105, 80, 0.18);
+}
+
+
+/* =========================================
+   LETRA C
+========================================= */
+
+.letra-c {
+    position: absolute;
+
+    top: -5px;
+    left: 0;
+
+    font-family: 'Allura', cursive;
+
+    font-size: 160px;
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #faf8f2;
+
+    text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.9),
+         1px  1px 0 rgba(120, 105, 80, 0.35),
+         0    0 0.6px rgba(120, 105, 80, 0.18);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   LETRA R
+========================================= */
+
+.letra-r {
+    position: absolute;
+
+    top: 62px;
+    left: 72px;
+
+    font-family: 'Allura', cursive;
+
+    font-size: 145px;
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #faf8f2;
+
+    -webkit-text-stroke: 0.35px rgba(120, 105, 80, 0.35);
+
+    text-shadow:
+        -0.8px -0.8px 0 rgba(255, 255, 255, 0.85),
+         0.8px  0.8px 0 rgba(120, 105, 80, 0.35);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   ABA DO ENVELOPE
+========================================= */
+
+.dobra {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 28%;
+
+    background: #f8f6ef;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SOMBRA DA ABA
+========================================= */
+
+.dobra::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(80, 65, 45, 0.20);
+
+    clip-path: polygon(
+        0 0,
+        50% 74%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    transform: translateY(5px);
+
+    filter: blur(6px);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   SUPERFÍCIE DA ABA
+========================================= */
+
+.dobra::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #f8f6ef;
+
+    clip-path: polygon(
+        0 0,
+        50% 72%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   ABA DO ENVELOPE — SVG
+========================================= */
+
+.aba-envelope {
+    position: absolute;
+
+    left: 12%;
+    top: -30px;
+
+    width: 76%;
+    height: 120px;
+
+    overflow: visible;
+
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+
+/* SOMBRA DA ABA */
+
+.sombra-aba {
+    fill: none;
+
+    stroke: rgba(70, 55, 40, 0.38);
+
+    stroke-width: 18;
+
+    stroke-linecap: round;
+
+    filter: url(#sombraAba);
+
+    transform: translateY(7px);
+}
+
+
+/* CONTORNO DA ABA */
+
+.borda-aba {
+    fill: none;
+
+    stroke: rgba(184, 151, 87, 0.42);
+
+    stroke-width: 1.4;
+
+    stroke-linecap: round;
+}
+
+
+/* =========================================
+   BOTÃO PULAR
+========================================= */
+
+.pular {
+    position: absolute;
+
+    bottom: 55px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 225px;
+    height: 48px;
+
+    background:
+        rgba(250, 248, 242, 0.60);
+
+    border:
+        1px solid
+        rgba(184, 151, 87, 0.40);
+
+    border-radius: 30px;
+
+    color:
+        rgba(177, 145, 83, 0.72);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease;
+}
+
+.pular:hover {
+    background:
+        rgba(255, 253, 247, 0.90);
+
+    border-color:
+        rgba(175, 155, 115, 0.55);
+
+    transform:
+        translateX(-50%)
+        scale(1.02);
+}
+
+
+/* =========================================
+   SEGUNDA TELA
+========================================= */
+
+.segunda-tela {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    height: auto;
+
+    background: #f8f6ef;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease,
+        visibility 1s;
+
+    z-index: 20;
+}
+
+.segunda-tela.ativa {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.foto-convite {
+    width: min(65vw, 340px);
+
+    height: 70vh;
+
+    overflow: hidden;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.foto-convite img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    object-position: center center;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo-convite {
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.tipo-convite {
+    margin: 0 0 12px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #8f8067;
+}
+
+.titulo-convite h1 {
+    margin: 0;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    color: #4f493f;
+}
+
+
+/* =========================================
+   INDICADOR DE ROLAGEM
+========================================= */
+
+.indicador-rolagem {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 20px;
+
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.indicador-rolagem span {
+    display: block;
+
+    animation:
+        rolarIndicador 1.8s ease-in-out infinite;
+}
+
+
+@keyframes rolarIndicador {
+
+    0% {
+        opacity: 0.2;
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            translateY(8px);
+    }
+
+    100% {
+        opacity: 0.2;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   INFORMAÇÃO DA FORMATURA
+========================================= */
+
+.informacao-formatura {
+    width: 100%;
+
+    min-height: 45vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 25px 70px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #f8f6ef 0%,
+            #eeece7 45%,
+            #e7e5df 100%
+        );
+}
+
+
+/* CURSO */
+
+.curso {
+    margin: 0;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    color: #4f493f;
+
+    text-align: center;
+
+    line-height: 1.1;
+}
+
+
+/* INSTITUIÇÃO */
+
+.instituicao {
+    margin: 18px 0 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: 5px;
+
+    color: #a89572;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   FRASE
+========================================= */
+
+.frase {
+    max-width: 500px;
+
+    margin: 55px auto 0;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+
+    color: #5f5b54;
+
+    text-align: center;
+}
+
+.autor {
+    margin: 15px 0 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    letter-spacing: 3px;
+
+    color: #8f8067;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   GALERIA DE FOTOS
+========================================= */
+
+.galeria-formatura {
+    width: 100%;
+
+    overflow: hidden;
+
+    margin-top: 40px;
+
+    padding: 30px 0 35px;
+
+    background: #d8d5ce;
+}
+
+.galeria-track {
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    width: max-content;
+
+    gap: 18px;
+
+    animation:
+        passarFotos 18s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* FOTOS */
+
+.foto-galeria {
+    width: 150px;
+    height: 200px;
+
+    min-width: 150px;
+
+    flex: 0 0 150px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 18px rgba(70, 65, 55, 0.18);
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   MOVIMENTO DA GALERIA
+========================================= */
+
+@keyframes passarFotos {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px));
+    }
+}
+
+
+/* =========================================
+   CONVITE PARA A SOLENIDADE
+========================================= */
+
+.convite-solenidade {
+    width: 100%;
+
+    padding: 0 30px 40px;
+
+    text-align: center;
+
+    background: #e7e5df;
+}
+
+.convite-solenidade p {
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #4f493f;
+}
+
+.titulo-celebracao {
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+    line-height: 1.5;
+
+    color: #a89572;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   DETALHES DA CELEBRAÇÃO
+========================================= */
+
+.detalhes-celebracao {
+    width: 100%;
+
+    padding: 45px 25px 60px;
+
+    text-align: center;
+
+    background: #e7e5df;
+}
+
+.nome-evento {
+    margin-top: 28px;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    color: #4f493f;
+}
+
+.descricao-evento {
+    max-width: 360px;
+
+    margin: 8px auto 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    color: #6f6a62;
+}
+
+.imagem-igreja {
+    display: block;
+
+    width: min(90vw, 500px);
+
+    height: auto;
+
+    margin: 15px auto 5px;
+}
+
+.nome-local {
+    margin-top: 5px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    color: #4f493f;
+}
+
+.endereco {
+    margin-top: 4px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    color: #6f6a62;
+}
+
+
+/* =========================================
+   BOTÕES — MAPA E AGENDA
+========================================= */
+
+.botoes-local {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+    flex-wrap: wrap;
+}
+
+.botao-local {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 145px;
+
+    height: 38px;
+
+    padding: 0 18px;
+
+    border:
+        1px solid
+        rgba(143, 128, 103, 0.45);
+
+    border-radius: 22px;
+
+    background:
+        rgba(248, 246, 239, 0.45);
+
+    color: #6f6658;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.botao-local:hover {
+    background: #f8f6ef;
+
+    border-color:
+        rgba(143, 128, 103, 0.7);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================
+   PROGRAMAÇÃO
+========================================= */
+
+.programacao {
+    background: #f4f0e8;
+
+    padding: 90px 6%;
+
+    text-align: center;
+}
+
+.titulo-programacao {
+    margin: 0 0 45px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    letter-spacing: 3px;
+
+    color: #5a5047;
+}
+
+
+/* CONTAINER */
+
+.programacao-wrapper {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* CARTÕES */
+
+.programacao-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.card-programacao {
+    background: #faf8f3;
+
+    border:
+        1px solid
+        rgba(90, 80, 71, 0.18);
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(70, 60, 50, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.card-programacao img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.nome-programacao {
+    margin: 0 0 10px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 27px;
+
+    color: #51483f;
+}
+
+.data-programacao {
+    margin: 0 0 10px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 14px;
+
+    color: #665d55;
+}
+
+.local-programacao {
+    margin: 0;
+
+    max-width: 300px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #766d65;
+}
+
+
+/* =========================================
+   SETAS
+========================================= */
+
+.seta-programacao {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    color: #766d65;
+
+    cursor: pointer;
+}
+
+
+/* INDICADORES */
+
+.indicadores-programacao {
+    display: none;
+}
+
+
+/* =========================================
+   CONFIRMAÇÃO DE PRESENÇA
+========================================= */
+
+.confirmacao-presenca {
+    width: 100%;
+
+    padding: 90px 25px 100px;
+
+    background: #eeebe3;
+
+    text-align: center;
+}
+
+.titulo-confirmacao {
+    margin: 0 0 18px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #5a5047;
+}
+
+.texto-confirmacao {
+    max-width: 430px;
+
+    margin: 0 auto 40px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+
+    color: #6f6a62;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-confirmacao {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background:
+        rgba(250, 248, 243, 0.75);
+
+    border:
+        1px solid
+        rgba(143, 128, 103, 0.20);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(70, 60, 50, 0.06);
+
+    text-align: left;
+}
+
+
+/* CAMPOS */
+
+.campo-confirmacao {
+    margin-bottom: 22px;
+}
+
+.campo-confirmacao > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #5f574e;
+}
+
+
+/* INPUTS */
+
+.campo-confirmacao input[type="text"],
+.campo-confirmacao input[type="tel"],
+.campo-confirmacao input[type="email"],
+.campo-confirmacao select {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 15px;
+
+    border:
+        1px solid
+        rgba(143, 128, 103, 0.30);
+
+    border-radius: 12px;
+
+    background: #faf8f3;
+
+    outline: none;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    color: #51483f;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campo-confirmacao input:focus,
+.campo-confirmacao select:focus {
+    border-color:
+        rgba(143, 128, 103, 0.65);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(143, 128, 103, 0.08);
+}
+
+.campo-confirmacao input::placeholder {
+    color: #aaa39a;
+}
+
+
+/* =========================================
+   OPÇÕES DE PRESENÇA
+========================================= */
+
+.opcoes-presenca {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.opcao-presenca {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid
+        rgba(143, 128, 103, 0.20);
+
+    border-radius: 12px;
+
+    background: #faf8f3;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border 0.3s ease;
+}
+
+.opcao-presenca:hover {
+    background: #f4f0e8;
+
+    border-color:
+        rgba(143, 128, 103, 0.40);
+}
+
+.opcao-presenca input {
+    accent-color: #8f8067;
+}
+
+.opcao-presenca span {
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    color: #5f574e;
+}
+
+
+/* =========================================
+   PRAZO
+========================================= */
+
+.prazo-confirmacao {
+    margin: 5px auto 15px;
+
+    text-align: center;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    color: #6f6658;
+}
+
+.prazo-confirmacao strong {
+    font-weight: 500;
+
+    color: #5a5047;
+}
+
+
+/* =========================================
+   AVISO
+========================================= */
+
+.aviso-acompanhantes {
+    max-width: 390px;
+
+    margin: 0 auto 28px;
+
+    padding: 12px 15px;
+
+    text-align: center;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    color: #766d65;
+
+    background:
+        rgba(231, 229, 223, 0.65);
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   BOTÃO DE CONFIRMAÇÃO
+========================================= */
+
+.botao-confirmacao {
+    display: block;
+
+    width: 100%;
+
+    height: 45px;
+
+    border:
+        1px solid
+        rgba(143, 128, 103, 0.45);
+
+    border-radius: 24px;
+
+    background: #f8f6ef;
+
+    color: #6f6658;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.8px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-confirmacao:hover {
+    background: #e7e5df;
+
+    border-color:
+        rgba(143, 128, 103, 0.70);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================
+   DÚVIDAS FREQUENTES
+========================================= */
+
+.duvidas-frequentes {
+    width: 100%;
+
+    padding: 85px 25px 90px;
+
+    background: #e3e0d9;
+
+    text-align: center;
+}
+
+.titulo-duvidas {
+    margin: 0 0 12px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #5a5047;
+}
+
+.subtitulo-duvidas {
+    max-width: 430px;
+
+    margin: 0 auto 45px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.5px;
+
+    color: #766d65;
+}
+
+
+/* CONTAINER */
+
+.faq-container {
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+
+/* ITEM */
+
+.faq-item {
+    border-bottom:
+        1px solid
+        rgba(90, 80, 71, 0.18);
+}
+
+
+/* PERGUNTA */
+
+.faq-pergunta {
+    width: 100%;
+
+    min-height: 65px;
+
+    padding: 18px 5px;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    color: #5a5047;
+}
+
+
+/* SÍMBOLO */
+
+.faq-simbolo {
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+    color: #a89572;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* RESPOSTA */
+
+.faq-resposta {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height 0.4s ease,
+        padding 0.4s ease;
+}
+
+.faq-resposta p {
+    max-width: 650px;
+
+    margin: 0;
+
+    padding:
+        0
+        35px
+        20px
+        5px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    color: #766d65;
+}
+
+
+/* ITEM ABERTO */
+
+.faq-item.ativo .faq-resposta {
+    max-height: 300px;
+}
+
+.faq-item.ativo .faq-simbolo {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   UM GESTO DE CARINHO
+========================================= */
+
+.gesto-carinho {
+    width: 100%;
+
+    padding: 80px 25px 90px;
+
+    background: #eeece6;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* CARD */
+
+.card-carinho {
+    width: min(88vw, 430px);
+
+    background: #faf8f3;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(70, 60, 50, 0.14);
+}
+
+
+/* FOTO */
+
+.foto-carinho {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.foto-carinho img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* TEXTO */
+
+.texto-carinho {
+    padding: 35px 30px 40px;
+
+    text-align: center;
+}
+
+.titulo-carinho {
+    margin: 0 0 18px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    color: #5a5047;
+}
+
+.mensagem-carinho {
+    margin: 0 auto;
+
+    max-width: 350px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    color: #766d65;
+}
+
+
+/* =========================================
+   CONTAGEM REGRESSIVA
+========================================= */
+
+.contagem-regressiva {
+    width: 100%;
+
+    padding: 90px 20px 100px;
+
+    text-align: center;
+
+    background: #eeece7;
+
+    color: #4f493f;
+}
+
+.titulo-contagem {
+    margin: 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #a89572;
+
+    text-transform: uppercase;
+}
+
+.texto-contagem {
+    margin: 18px 0 45px;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 36px;
+
+    color: #4f493f;
+}
+
+
+/* CONTADOR */
+
+.contador {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.tempo {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 75px;
+}
+
+.tempo span {
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #5a5047;
+}
+
+.tempo small {
+    margin-top: 8px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #8f8067;
+}
+
+.separador {
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 38px;
+
+    color: #a89572;
+
+    margin-top: -15px;
+}
+
+
+/* EVENTO */
+
+.nome-contagem {
+    margin: 50px 0 5px;
+
+    font-family:
+        'Allura',
+        cursive;
+
+    font-size: 32px;
+
+    color: #4f493f;
+}
+
+.data-contagem {
+    margin: 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #8f8067;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* PRIMEIRA TELA */
+
+    .segunda-tela {
+        padding-top: 0;
+    }
+
+
+    /* FOTO PRINCIPAL */
+
+    .foto-convite {
+        width: 100vw;
+
+        height: auto;
+
+        max-width: 412px;
+
+        max-height: none;
+
+        overflow: hidden;
+    }
+
+    .foto-convite img {
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+        display: block;
+    }
+
+
+    /* TÍTULO */
+
+    .titulo-convite {
+        text-align: center;
+
+        margin-top: 50px;
+    }
+
+    .tipo-convite {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .titulo-convite h1 {
+        font-size: 48px;
+    }
+
+
+    /* SETAS DE ROLAGEM */
+
+    .indicador-rolagem {
+        position: absolute;
+
+        bottom: 60px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        z-index: 5;
+    }
+
+    .indicador-rolagem span {
+        font-family: Arial, sans-serif;
+
+        font-size: 22px;
+
+        line-height: 12px;
+
+        font-weight: 300;
+
+        color: #a89572;
+
+        opacity: 0;
+
+        animation:
+            setinhaDescer
+            1.8s ease-in-out infinite;
+    }
+
+    .indicador-rolagem span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .indicador-rolagem span:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    .indicador-rolagem span:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+
+    @keyframes setinhaDescer {
+
+        0% {
+            opacity: 0;
+
+            transform:
+                translateY(-8px);
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+
+            transform:
+                translateY(12px);
+        }
+    }
+
+
+    /* INFORMAÇÃO */
+
+    .informacao-formatura {
+        width: 100%;
+
+        min-height: 45vh;
+
+        padding:
+            30px
+            25px
+            70px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                #f8f6ef 0%,
+                #eeece7 45%,
+                #e7e5df 100%
+            );
+    }
+
+    .curso {
+        font-size: 48px;
+    }
+
+    .instituicao {
+        font-size: 11px;
+
+        letter-spacing: 5px;
+    }
+
+
+    /* FRASE */
+
+    .frase {
+        max-width: 330px;
+
+        font-size: 17px;
+
+        line-height: 1.6;
+
+        margin-top: 45px;
+    }
+
+    .autor {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    /* =====================================
+       GALERIA — CELULAR
+    ===================================== */
+
+    .galeria-formatura {
+        margin-top: 60px;
+
+        padding:
+            30px
+            0
+            35px;
+    }
+
+    .galeria-track {
+        gap: 14px;
+
+        animation:
+            passarFotos 24s linear infinite;
+    }
+
+    .foto-galeria {
+        width: 150px;
+
+        height: 205px;
+
+        min-width: 150px;
+
+        flex: 0 0 150px;
+
+        border-radius: 15px;
+    }
+
+
+    /* =====================================
+       SOLENIDADE
+    ===================================== */
+
+    .detalhes-celebracao {
+        padding:
+            40px
+            20px
+            55px;
+    }
+
+    .nome-evento {
+        font-size: 34px;
+
+        margin-top: 25px;
+    }
+
+    .descricao-evento {
+        max-width: 340px;
+
+        font-size: 9px;
+    }
+
+    .imagem-igreja {
+        width: 100%;
+
+        margin-top: 12px;
+    }
+
+
+    /* =====================================
+       BOTÕES
+    ===================================== */
+
+    .botoes-local {
+        gap: 10px;
+
+        margin-top: 20px;
+    }
+
+    .botao-local {
+        min-width: 135px;
+
+        height: 36px;
+
+        font-size: 7.5px;
+    }
+
+
+    /* =====================================
+       PROGRAMAÇÃO
+    ===================================== */
+
+    .programacao {
+        padding:
+            70px
+            0
+            55px;
+
+        overflow: hidden;
+    }
+
+    .titulo-programacao {
+        margin-bottom: 30px;
+
+        font-size: 29px;
+    }
+
+    .programacao-wrapper {
+        width: 100%;
+
+        gap: 0;
+
+        position: relative;
+    }
+
+    .programacao-container {
+        display: flex;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+
+        gap: 18px;
+
+        padding:
+            0
+            12%;
+    }
+
+    .programacao-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-programacao {
+        min-width: 76%;
+
+        scroll-snap-align: center;
+
+        padding: 22px;
+    }
+
+    .card-programacao img {
+        height: 190px;
+    }
+
+    .nome-programacao {
+        font-size: 25px;
+    }
+
+    .data-programacao {
+        font-size: 13px;
+    }
+
+    .local-programacao {
+        font-size: 12px;
+    }
+
+
+    /* SETAS */
+
+    .seta-programacao {
+        display: block;
+
+        position: absolute;
+
+        z-index: 5;
+
+        width: 35px;
+
+        height: 45px;
+
+        padding: 0;
+    }
+
+    .seta-esquerda {
+        left: 3px;
+    }
+
+    .seta-direita {
+        right: 3px;
+    }
+
+
+    /* BOLINHAS */
+
+    .indicadores-programacao {
+        display: flex;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+    .indicador {
+        width: 7px;
+
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: #c9c1b7;
+    }
+
+    .indicador.ativo {
+        background: #71665c;
+    }
+
+
+    /* =====================================
+       CONFIRMAÇÃO
+    ===================================== */
+
+    .confirmacao-presenca {
+        padding:
+            70px
+            18px
+            80px;
+    }
+
+    .titulo-confirmacao {
+        font-size: 28px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .texto-confirmacao {
+        max-width: 320px;
+
+        font-size: 10px;
+
+        margin-bottom: 32px;
+    }
+
+    .form-confirmacao {
+        padding:
+            25px
+            20px;
+
+        border-radius: 20px;
+    }
+
+    .campo-confirmacao {
+        margin-bottom: 19px;
+    }
+
+    .campo-confirmacao input[type="text"],
+    .campo-confirmacao input[type="tel"],
+    .campo-confirmacao input[type="email"],
+    .campo-confirmacao select {
+        height: 42px;
+
+        font-size: 10px;
+    }
+
+    .opcao-presenca {
+        padding:
+            11px
+            12px;
+    }
+
+    .opcao-presenca span {
+        font-size: 9px;
+    }
+
+    .prazo-confirmacao {
+        font-size: 9px;
+    }
+
+    .aviso-acompanhantes {
+        font-size: 8.5px;
+    }
+
+
+    /* =====================================
+       FAQ
+    ===================================== */
+
+    .duvidas-frequentes {
+        padding:
+            70px
+            20px
+            75px;
+    }
+
+    .titulo-duvidas {
+        font-size: 29px;
+
+        letter-spacing: 2px;
+    }
+
+    .subtitulo-duvidas {
+        max-width: 320px;
+
+        margin-bottom: 35px;
+
+        font-size: 9px;
+    }
+
+    .faq-pergunta {
+        min-height: 62px;
+
+        padding:
+            17px
+            3px;
+
+        font-size: 10px;
+    }
+
+    .faq-simbolo {
+        font-size: 18px;
+    }
+
+    .faq-resposta p {
+        padding:
+            0
+            25px
+            20px
+            3px;
+
+        font-size: 9px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================
+       GESTO DE CARINHO
+    ===================================== */
+
+    .gesto-carinho {
+        padding:
+            65px
+            20px
+            75px;
+    }
+
+    .card-carinho {
+        width: 88vw;
+
+        border-radius: 24px;
+    }
+
+    .texto-carinho {
+        padding:
+            30px
+            22px
+            35px;
+    }
+
+    .titulo-carinho {
+        font-size: 29px;
+
+        margin-bottom: 15px;
+    }
+
+    .mensagem-carinho {
+        font-size: 9px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =====================================
+       CONTAGEM
+    ===================================== */
+
+    .contagem-regressiva {
+        padding:
+            75px
+            15px
+            85px;
+    }
+
+    .texto-contagem {
+        font-size: 32px;
+
+        margin-bottom: 38px;
+    }
+
+    .contador {
+        gap: 5px;
+    }
+
+    .tempo {
+        min-width: 65px;
+    }
+
+    .tempo span {
+        font-size: 38px;
+    }
+
+    .tempo small {
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .separador {
+        font-size: 28px;
+
+        margin-top: -12px;
+    }
+
+    .nome-contagem {
+        margin-top: 42px;
+
+        font-size: 30px;
+    }
+}
