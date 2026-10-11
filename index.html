@@ -81,15 +81,14 @@
 <section class="segunda-tela" id="segundaTela">
 
     <!-- FOTO -->
+<div class="foto-convite">
+    <picture>
+        <source media="(max-width: 768px)" srcset="./chaiane9.jpeg">
+        <img src="./chaiane7.jpeg" alt="Chaiane Rott">
+    </picture>
+</div>
 
-    <div class="foto-convite">
-
-        <img
-            src="./chaiane1.png"
-            alt="Chaiane Rott"
-        >
-
-    </div>
+</div>
 
 
     <!-- TÍTULO -->
@@ -111,8 +110,6 @@
 
     <div class="indicador-rolagem">
 
-        <span>⌄</span>
-        <span>⌄</span>
         <span>⌄</span>
         <span>⌄</span>
         <span>⌄</span>
@@ -150,10 +147,6 @@
     <!-- PRIMEIRA SEQUÊNCIA -->
 
     <div class="foto-galeria">
-        <img src="./chaiane9.jpeg" alt="">
-    </div>
-
-    <div class="foto-galeria">
         <img src="./chaiane7.jpeg" alt="">
     </div>
 
@@ -167,10 +160,6 @@
 
 
     <!-- SEGUNDA SEQUÊNCIA -->
-
-    <div class="foto-galeria">
-        <img src="./chaiane9.jpeg" alt="">
-    </div>
 
     <div class="foto-galeria">
         <img src="./chaiane7.jpeg" alt="">
@@ -187,9 +176,19 @@
  <!-- TERCEIRA SEQUÊNCIA -->
 
     <div class="foto-galeria">
-        <img src="./chaiane9.jpeg" alt="">
+        <img src="./chaiane7.jpeg" alt="">
     </div>
 
+    <div class="foto-galeria">
+        <img src="./chaiane10.png" alt="">
+    </div>
+
+    <div class="foto-galeria">
+        <img src="./chaiane8.jpeg" alt="">
+    </div>
+
+ <!-- QUARTA SEQUÊNCIA -->
+  
     <div class="foto-galeria">
         <img src="./chaiane7.jpeg" alt="">
     </div>
@@ -503,10 +502,10 @@
         </div>
 
 
-        <div class="campo-confirmacao">
+               <div class="campo-confirmacao">
 
             <label>
-                Você estará presente?
+                Estarei presente em:
             </label>
 
             <div class="opcoes-presenca">
@@ -514,14 +513,13 @@
                 <label class="opcao-presenca">
 
                     <input
-                        type="radio"
-                        name="presenca"
-                        value="Sim, estarei presente"
-                        required
+                        type="checkbox"
+                        name="eventos"
+                        value="Culto Ecumênico"
                     >
 
                     <span>
-                        Sim, estarei presente
+                        Culto Ecumênico — 29/01/2027
                     </span>
 
                 </label>
@@ -530,15 +528,38 @@
                 <label class="opcao-presenca">
 
                     <input
-                        type="radio"
-                        name="presenca"
-                        value="Não irei comparecer"
+                        type="checkbox"
+                        name="eventos"
+                        value="Colação de Grau"
                     >
 
                     <span>
-                        Não irei comparecer
+                        Colação de Grau — 30/01/2027
                     </span>
 
+                </label>
+
+
+                <label class="opcao-presenca">
+
+                    <input
+                        type="checkbox"
+                        name="eventos"
+                        value="Baile de Formatura"
+                    >
+
+                    <span>
+                        Baile de Formatura — 30/01/2027
+                    </span>
+
+                </label>
+ <label class="opcao-presenca">
+                    <input
+                        type="radio"
+                        name="presenca"
+                        value="Não estarei presente"
+                    >
+                    <span>Não estarei presente</span>
                 </label>
 
             </div>
@@ -573,13 +594,6 @@
                     3 acompanhantes
                 </option>
 
-                <option value="4">
-                    4 acompanhantes
-                </option>
-
-                <option value="5">
-                    5 acompanhantes
-                </option>
 
             </select>
 
@@ -875,15 +889,18 @@
 
     <div class="card-carinho">
 
+        <!-- FOTO -->
+
         <div class="foto-carinho">
 
             <img
-                src="./chaiane3.jpeg"
+                src="./chaiane11.jpeg"
                 alt="Chaiane Rott"
             >
 
         </div>
 
+        <!-- TEXTO -->
 
         <div class="texto-carinho">
 
@@ -892,16 +909,34 @@
             </p>
 
             <p class="mensagem-carinho">
-                Se quiser me presentear ou deixar uma mensagem especial,
-                ficarei muito feliz em receber seu carinho neste momento
-                tão importante.
+                Ter você comigo neste momento tão especial já será um presente inesquecível.
+                Se ainda assim desejar me presentear, deixo aqui a minha chave Pix:
             </p>
+
+            <!-- CHAVE PIX -->
+
+            <div class="pix-container">
+
+                <span id="chave-pix" class="pix-chave">
+                    47997161316
+                </span>
+
+                <button
+                    type="button"
+                    class="botao-pix"
+                    onclick="copiarPix()"
+                >
+                    Copiar chave
+                </button>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
+
 
 <!-- =========================================
      CONTAGEM REGRESSIVA
@@ -914,8 +949,8 @@
     </p>
 
     <p class="texto-contagem">
-    Até o nosso primeiro grande momento
-</p>
+        Até o nosso primeiro grande momento
+    </p>
 
     <div class="contador">
 
@@ -948,17 +983,76 @@
     </div>
 
     <p class="nome-contagem">
-    Culto Ecumênico
-</p>
+        Culto Ecumênico
+    </p>
 
-<p class="data-contagem">
-    29 de janeiro de 2027 · 21h
-</p>
+    <p class="data-contagem">
+        29 de janeiro de 2027 · 21h
+    </p>
 
 </section>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+async function copiarPix() {
+
+    const chave = document
+        .getElementById("chave-pix")
+        .textContent
+        .trim();
+
+    const botao = document.querySelector(".botao-pix");
+
+    try {
+
+        await navigator.clipboard.writeText(chave);
+
+        botao.textContent = "Chave copiada ✓";
+
+    } catch (erro) {
+
+        const campo = document.createElement("textarea");
+
+        campo.value = chave;
+
+        campo.style.position = "fixed";
+        campo.style.opacity = "0";
+
+        document.body.appendChild(campo);
+
+        campo.select();
+
+        const copiou = document.execCommand("copy");
+
+        campo.remove();
+
+        if (copiou) {
+
+            botao.textContent = "Chave copiada ✓";
+
+        } else {
+
+            botao.textContent = "Copie manualmente";
+
+        }
+
+    }
+
+    setTimeout(() => {
+
+        botao.textContent = "Copiar chave";
+
+    }, 2500);
+
+}
+</script>
 
 <script src="script.js"></script>
 
 </body>
 
-</html> 
+</html>
