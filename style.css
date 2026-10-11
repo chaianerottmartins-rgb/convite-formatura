@@ -2527,7 +2527,11 @@ body.abertura-ativa .abertura {
 
     white-space: nowrap;
     text-decoration: none !important;
+    text-align: center;
+display: block;
+width: 100%;
 }
+
 #chave-pix,
 .pix-chave,
 .pix-chave:link,
